@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Hanken Grotesk", sans-serif;
+}
+div.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+div.draw{
+    background: linear-gradient( to bottom ,hsl(252, 100%, 67%),hsl(241, 81%, 54%) );
+    width: 500px;
+    height: 300px;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
+    -web-kit-box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
+    -moz-box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
+}
+div.draw h1{
+    color: white;
+    font-weight: bolder;
+}
+div.draw button{
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 60px;
+    color: white;
+    font-weight: bold;
+    background-color: hsl(224, 30%, 27%);
+    transition: 1s;
+    
+}
+div.draw button:hover{
+    color: hsl(224, 30%, 27%);
+    background-color: white;
+}
+div.draw button:active{
+    padding: 20px 70px;
+}
+div.result{
+    background: linear-gradient( to bottom ,hsl(252, 100%, 67%),hsl(241, 81%, 54%) );
+    display: flex;
+    height: 400px;
+    width: 600px;
+    border-radius: 20px;
+}
+div.result-div{
+    text-align: center;
+    margin-right: 20px;
+    margin-left:15px;
+}
+div.result-div h3{
+    color: white;
+    opacity: 0.8;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+div.result-number{
+    margin-bottom: 30px;
+    border-radius: 100%;
+    width: 50px;
+    margin: 0 auto;
+    padding: 20px;
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0))
+    };
+
+ span#number{
+    display: block;
+    font-size: 3rem;
+    color: white;
+}
