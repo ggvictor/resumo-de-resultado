@@ -4,6 +4,9 @@
     padding: 0;
     font-family: "Hanken Grotesk", sans-serif;
 }
+body{
+    overflow: hidden;
+}
 div.container{
     height: 100vh;
     display: flex;
@@ -16,14 +19,15 @@ div.draw{
     width: 500px;
     height: 300px;
     text-align: center;
-    display: none;
+    display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    border-radius: 20px;
+    border-radius: 30px;
     box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
     -web-kit-box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
     -moz-box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
+    transition:1s;
 }
 div.draw h1{
     color: white;
@@ -48,34 +52,140 @@ div.draw button:active{
     padding: 20px 70px;
 }
 div.result{
-    background: linear-gradient( to bottom ,hsl(252, 100%, 67%),hsl(241, 81%, 54%) );
-    display: flex;
+    display: none;
     height: 400px;
     width: 600px;
-    border-radius: 20px;
+    border-radius: 30px;
+    position:relative;
+    transition:1s;
 }
 div.result-div{
+    background: linear-gradient( to bottom ,hsl(252, 100%, 67%),hsl(241, 81%, 54%) );
+    border-radius: 30px;
     text-align: center;
     margin-right: 20px;
     margin-left:15px;
+    width: 48%;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
+    -web-kit-box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
+    -moz-box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
+    
+   
 }
 div.result-div h3{
     color: white;
     opacity: 0.8;
     margin-top: 20px;
     margin-bottom: 25px;
+    
 }
 div.result-number{
     margin-bottom: 30px;
     border-radius: 100%;
-    width: 50px;
+    width: 90px;
     margin: 0 auto;
     padding: 20px;
-    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0))
+    background-image: linear-gradient(hsla(256, 72%, 46%, 1),hsla(241, 72%, 46%, 0));
     };
 
- span#number{
-    display: block;
-    font-size: 3rem;
+ .result-number p {
+    color:white;
+ }
+ .result-div p{
+    color:white;
+    
+    text-align:center;
+ }
+ .result-div span#text{
+    display:block;
+    font-size:2.5rem;
+    font-weight:bold;
+    margin-top:20px;
+    margin-bottom:20px;
+ }
+ .summary{
+    display: flex;
+    flex-direction: column;
+    position:absolute;
+    left:51%;
+    height:380px;
+    background-color: white;
+    border-radius: 30px;
+    width: 48%;
+    box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
+    -web-kit-box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
+    -moz-box-shadow: 5px 5px 10px 3px rgba(0, 0,0, 1);
+    padding:10px;
+
+ }
+ .summary h3{
+    margin-left:20px;
+    font-weight: bold;
+    color:#444;
+    margin-bottom: 40px;
+ }
+ .summary-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    gap:20px;
+ }
+ div.summary-result{
+    display:flex;
+    gap: 15px;;
+    width:150px;
+ }
+ #reacao p{
+    color:hsl(0, 100%, 67%);
+ }
+ #memoria p{
+    color:hsl(39, 100%, 56%);
+ }
+ #verbal p{
+    color:hsl(166, 100%, 37%);
+ }
+ #visual p{
+    color:hsl(234, 85%, 45%);
+ }
+ #reacao p span,#memoria p span, #verbal p span, #visual p span{
+    color:black;
+ }
+ #reacao{
+    background-color: #fff7f5;
+    padding:10px 20px;
+ }
+ #memoria{
+    background-color:#fdfdef;
+    padding:10px 20px;
+ }
+ #verbal{
+    background-color: #F2FBFA;
+    padding:10px 20px;
+ }
+ #visual{
+    background-color:#F3F3FF;
+    padding:10px 20px;
+ }
+
+ .summary button{
+    margin-top:40px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    padding: 10px 60px;
     color: white;
+    font-weight: bold;
+    background-color: hsl(224, 30%, 27%);
+    transition: 1s;
+ }
+ .summary button:hover{
+    color: hsl(224, 30%, 27%);
+    background-color: #ccc;
+ }
+ .summary button:active{
+    padding: 20px 70px;
+ }
+.summary-number{
+    font-weight: bolder;
 }

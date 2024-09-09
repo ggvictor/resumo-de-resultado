@@ -6,6 +6,7 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   <link rel="stylesheet" href="css/style.css">
+  <script src="js/scripts.js" defer></script>
   
   <title>Frontend Mentor | Resumo de resultados</title>
 
@@ -14,25 +15,43 @@
   <div class="container">
     <div class="draw">
       <h1>Sorteando seu resultado</h1>
-      <button>Sortear</button>
+      <button id="sortear">Sortear</button>
     </div>
     <div class="result">
       <div class="result-div">
         <h3>Seu resultado</h3>
         <div class="result-number">
-          <p><span id="number">76</span> De 100</p>
+          <p style="color:white; opacity:0.8;"><span id="number" style="color: white; display: block; font-size: 4rem; font-weight: bold; opacity:1;">76</span> De 100</p>
         </div>
-        <p><span>Ótimo</span>
+        <p><span id="text">Ótimo</span>
           Você obteve poncentagem de <span id="porcentagem">65%</span>.</p>
       </div>
       <div class="summary">
         <h3>Sumário</h3>
-        <p><img src="assets/images/icon-reaction.svg" alt="simbolo">Reação <span>80</span>/100</p>
-        <p><img src="assets/images/icon-memory.svg" alt="simbolo">Memoria <span>92</span>/100</p>
-        <p><img src="assets/images/icon-verbal.svg" alt="simbolo">Verbal <span>61</span>/100</p>
-        <p><img src="assets/images/icon-visual.svg" alt="simbolo">Visual <span>72</span>/100</p>
+        <div class="summary-div">
+          <div class="summary-result" id="reacao">
+            <img src="assets/images/icon-reaction.svg" alt="simbolo">
+            <p>Reação</p>
+            <span><span class="summary-number">80</span>/100</span>
+          </div>
+          <div class="summary-result" id="memoria">
+            <img src="assets/images/icon-memory.svg" alt="simbolo">
+            <p>Memoria </p>
+            <span><span class="summary-number">80</span>/100</span>
+          </div>
+          <div class="summary-result" id="verbal">
+            <img src="assets/images/icon-verbal.svg" alt="simbolo">
+            <p>Verbal</p>
+            <span><span class="summary-number">80</span>/100</span>
+          </div>
+          <div class="summary-result" id="visual">
+            <img src="assets/images/icon-visual.svg" alt="simbolo">
+            <p>Visual </p>
+            <span><span class="summary-number">80</span>/100</span>
+          </div>
+        </div>
 
-        <button>Voltar</button>
+        <button id="voltar">Voltar</button>
       </div>
     </div>
   </div>
