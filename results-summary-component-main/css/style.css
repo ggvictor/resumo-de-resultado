@@ -6,9 +6,10 @@
 }
 body{
     overflow: hidden;
+    height: 10vh;
 }
 div.container{
-    height: 100vh;
+   height: 90vh; 
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -178,6 +179,7 @@ div.result-number{
     font-weight: bold;
     background-color: hsl(224, 30%, 27%);
     transition: 1s;
+    
  }
  .summary button:hover{
     color: hsl(224, 30%, 27%);
@@ -188,4 +190,62 @@ div.result-number{
  }
 .summary-number{
     font-weight: bolder;
+}
+.attribution{
+   margin-top: 20px;
+}
+
+
+/* responsivo */
+
+@media (max-width:650px){
+   body{
+      overflow: scroll;
+      height: 100vh;
+  }
+   div.draw{
+      display: flex;
+      width: 90%;
+      height: auto;
+      gap: 10px;
+
+  }
+  div.result{
+   display: none;
+   flex-direction: column ;
+   height: 600px;
+   width: 350px;
+   border-radius: 30px;
+   position: static;
+   transition:1s;
+}
+.summary {
+   position: static; 
+   width: 90%; 
+   height: 300px; 
+   margin-top: 20px; 
+ }
+ div.result-div{
+   width: 90%; 
+   margin: 10px 0; 
+ }
+ .summary h3{
+   text-align: center;
+   margin-left:20px;
+   font-weight: bold;
+   color:#444;
+   margin-bottom: 40px;
+}
+.result-div p{
+   color:white;
+   padding-bottom: 25px;
+   text-align:center;
+}
+div.draw button{
+   margin-bottom: 20px;
+}
+.attribution{
+   margin-top: 200px;
+}
+
 }
